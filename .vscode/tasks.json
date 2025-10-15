@@ -46,6 +46,29 @@
 				"$eslint-stylish"
 			],
 			"group": "build"
+		},
+		{
+			"label": "Clean install with legacy peer deps",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Next build (retry 2)",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"next",
+				"build"
+			],
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"group": "build"
 		}
 	]
 }
