@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles for dark background and smooth fonts */
+html, body, #__next { height: 100%; }
+
+:root{
+  color-scheme: dark;
+}
+
+/* Scrollbar styling for a polished look */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 10px; }
+*::-webkit-scrollbar-track { background: #141414; }
+
+/* xterm theme overrides for neon green shell */
+.xterm-helpers, .xterm-screen, .xterm { font-family: theme("fontFamily.mono"); }
+.xterm .xterm-viewport { background-color: #000 !important; }
+.xterm .xterm-screen { color: #00ff72 !important; }
+
+/* Animations */
+.fade-in { @apply transition-opacity duration-300 ease-out opacity-0; }
+.fade-in.show { @apply opacity-100; }
